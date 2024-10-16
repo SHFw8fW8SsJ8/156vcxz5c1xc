@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="format-detection" content="telephone=no">
+    <title>Nithish</title>
+    <link href="css/main.css" rel="stylesheet">
+    <link rel="shortcut icon" href="img/favicon_1.ico.png" type="image/x-icon">
+    <style>
+      @keyframes animate-circle {
+      	from {
+      		transform: scale(0);
+      		opacity: 1;
+      	}
+      	to {
+      		transform: scale(1);
+      		opacity: 0;
+      	}
+      }
+      #preloader{
+      	width: 100%;
+      	height: 100%;
+      	position: fixed;
+      	top: 0;
+      	left: 0;
+      	z-index: 999;
+      	background: #497245;
+      	background: linear-gradient(to right, rgb(42, 53, 41) 0%, rgb(58, 77, 59) 32%, rgb(82, 129, 76) 100%);
+      }
+      .loader {
+      	position: fixed;
+      	top: 50%;
+      	left: 50%;
+      	height: 10rem;
+      	width: 10rem;
+      	transform: translateX(-50%) translateY(-50%);
+      }
+      .loader > .circle {
+      	position: absolute;
+      	height: inherit;
+      	width: inherit;
+      	background: #4db649;
+      	border-radius: 0;
+      	animation: animate-circle 2s cubic-bezier(.9, .24, .62, .79) infinite;
+      }
+      .loader > .circle:nth-of-type(1) {
+      	animation-delay: 0s;
+      }
+      .loader > .circle:nth-of-type(2) {
+      	animation-delay: calc(2s / -3);
+      }
+      .loader > .circle:nth-of-type(3) {
+      	animation-delay: calc(2s / -6);
+      }
+    </style>
+  </head>
+  <body>
+    
+    <div id="preloader">
+      <div class="loader">
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+      </div>
+    </div>
+    <main class="main main--home" style="opacity:0">
+      <canvas class="noise" id="noise"></canvas>
+      <div class="header">
+        <div class="header__left">
+          <div class="header__letter"><a href="/">N</a></div>
+          <div class="header__socials"><a href="" target="_blank">
+              <svg>
+                <use xlink:href="./svg/sprite.svg#fb"></use>
+              </svg></a><a href="" target="_blank">
+              <svg>
+                <use xlink:href="./svg/sprite.svg#tw"></use>
+              </svg></a><a href="" target="_blank">
+              <svg>
+                <use xlink:href="./svg/sprite.svg#in"></use>
+              </svg></a></div>
+        </div>
+        <div class="header__right">
+          <ul class="header__menu">
+            <li class="active"><a class="js-scroll-link" href="javascript:;" data-link="0">HOME</a></li>
+            <li><a class="js-scroll-link" href="javascript:;" data-link="1">Projects</a></li>
+            <li><a class="js-scroll-link" href="javascript:;" data-link="2">Upcomming</a></li>
+            <li><a class="js-scroll-link" href="javascript:;" data-link="3">About Me</a></li>
+            <li><a class="js-scroll-link" href="javascript:;" data-link="4">experience</a></li>
+            <li><a class="js-scroll-link" href="javascript:;" data-link="5">blog</a></li>
+            <li><a class="js-scroll-link" href="javascript:;" data-link="6">CONTACT</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="scroll">
+        <div class="home-page">
+          <div class="page-title show">
+            <ul>
+              <li>
+                <div class="title">Intro</div>
+                <div class="number">1.1</div>
+              </li>
+              <li>
+                <div class="title">Projects</div>
+                <div class="number">1.2</div>
+              </li>
+              <li>
+                <div class="title">Upcomming</div>
+                <div class="number">1.3</div>
+              </li>
+              <li>
+                <div class="title">About Me</div>
+                <div class="number">1.4</div>
+              </li>
+              <li>
+                <div class="title">working experience</div>
+                <div class="number">1.5</div>
+              </li>
+              <li>
+                <div class="title">from the blog</div>
+                <div class="number">1.6</div>
+              </li>
+              <li>
+                <div class="title">contact</div>
+                <div class="number">1.7</div>
+              </li>
+            </ul>
+            <canvas class="noise noise--inner" id="noise_menu"></canvas>
+          </div>
+
+                                                                                                      <!-- Intro -->
+
+          <div class="scrollable">
+            <section class="home">
+              <div class="sticky-title">
+                <ul>
+                  <li>
+                    <div>my name is Nithish</div>
+                    <div>1.1</div>
+                  </li>
+                </ul>
+              </div>
+              <div class="content">
+                <div class="content__left">
+                  <div class="content__title">
+                    <div class="h1">GET YOUR</div>
+                    <div class="h1">GREAT</div>
+                    <div class="h1">Game</div>
+                  </div>
+                  <div class="content__description">
+                    <div class="small">Hello, my name is Nithish and i am 3D Enviroment Artist and Game developer,  I specialize in using Maya, Unreal Engine, Substance Painter, etc. </div>
+                  </div>
+                  <div class="content__btn-block">
+                    <div class="content__btn-label small">Hire Me</div><a class="content__btn-btn btn btn--arrow js-scroll-link" href="#hireme" data-link="6">
+                      <svg>
+                        <use xlink:href="./svg/sprite.svg#arrow"></use>
+                      </svg></a>
+                  </div>
+                  <div class="home__numbers">
+                    <div class="home__number">
+                      <div class="home__number-digital" data-number="5">5</div>
+                      <div class="home__number-text small">Years <br>experience</div>
+                    </div>
+                    
+                    <div class="home__number">
+                      <div class="home__number-digital" data-number="7">7</div>
+                      <div class="home__number-text small">Projects <br>Done</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="content__right">
+                  <div class="home__circles">
+                    <div class="home__circles-lines"></div>
+                    <div class="home__circle home__circle--left"><img class="home__circle-img" src="img/image-1.png" alt=""></div>
+                    
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+                                                                                                      <!-- Projects -->
+          <div class="scrollable">
+            <section class="projects">
+              <div class="sticky-title">
+                <ul>
+                  <li>
+                    <div>Projects</div>
+                    <div>1.2</div>
+                  </li>
+                </ul>
+              </div>
+              <div class="content">
+                <div class="content__left">
+                  <div class="content__title">
+                    <div class="h1">projects</div>
+                  </div>
+                  <ul class="content__menu projects__menu">
+                    <li class="active"><a href="javascript:;">Project 1</a></li>
+                    <li><a href="javascript:;">Project 2</a></li>
+                    <li><a href="javascript:;">Project 3</a></li>
+                    <li><a href="javascript:;">Project 4</a></li>
+                    <li><a href="javascript:;">Project 5</a></li>
+                    <li><a href="javascript:;">Project 6</a></li>
+                  </ul>
+                  <div class="content__btn-block">
+                    <div class="content__btn-label small">View all works</div><a class="content__btn-btn btn btn--arrow" href="#" target="_blank" rel="nofollow">
+                      <svg>
+                        <use xlink:href="./svg/sprite.svg#arrow"></use>
+                      </svg></a>
+                  </div>
+                </div>
+                <div class="content__right">
+                  <div class="projects__blocks">
+                    <div class="projects__block active"><a href="#" target="_blank" rel="nofollow"><img src="img/project-1.jpg" alt=""></a></div>
+                    <div class="projects__block active"><a href="#" target="_blank" rel="nofollow"><img src="img/project-2.jpg" alt=""></a></div>
+                    <div class="projects__block active"><a href="#" target="_blank" rel="nofollow"><img src="img/project-3.jpg" alt=""></a></div>
+                    <div class="projects__block active"><a href="#" target="_blank" rel="nofollow"><img src="img/project-4.jpg" alt=""></a></div>
+                    <div class="projects__block active"><a href="#" target="_blank" rel="nofollow"><img src="img/project-5.jpg" alt=""></a></div>
+                    <div class="projects__block active"><a href="#" target="_blank" rel="nofollow"><img src="img/project-6.jpg" alt=""></a></div>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+
+                                                                                                      <!-- Upcomming -->
+        
+          <div class="scrollable">
+            <section class="awards">
+              <div class="sticky-title">
+                <ul>
+                  <li>
+                    <div>Upcomming</div>
+                    <div>1.3</div>
+                  </li>
+                </ul>
+              </div>
+              <div class="content">
+                <div class="content__left">
+                  <div class="content__title">
+                    <div class="h1">Explore my</div>
+                    <div class="h1">Next Ideas</div>
+                  </div>
+                  <div class="content__description">
+                    <div class="small">I’m always working on new ideas and pushing my creative limits. These upcoming projects will challenge me to explore even more complex environments and dynamic gameplay features.</div>
+                  </div>
+                  <div class="content__btn-block">
+                    <div class="content__btn-label small">Join Discord</div><a class="content__btn-btn btn btn--arrow" href="#">
+                      <svg>
+                        <use href="img/arrow-link.svg"></use>
+                      </svg></a>
+                  </div>
+                </div>
+                <div class="content__right">
+                  <div class="content__subtitle">Projects <span>Upcomming</span></div>
+                  <div class="content__awards awards__list">
+                    <div class="content__award">
+                      <div class="content__award-img"><img src="img/up-1.png" alt=""></div>
+                      <div class="content__award-title">
+                        <p>Frostbite Frontier</p>
+                      </div>
+                      <div class="content__award-text small"> this project will push the limits of creating realistic, cold environments</div>
+                    </div>
+                    <div class="content__award">
+                      <div class="content__award-img"><img src="img/up-2.png" alt=""></div>
+                      <div class="content__award-title">
+                        <p> Lunar Outpost</p>
+                      </div>
+                      <div class="content__award-text small"> The environment will feature detailed space stations, barren landscapes, and futuristic technology</div>
+                    </div>
+                    <div class="content__award">
+                      <div class="content__award-img"><img src="img/up-3.png" alt=""></div>
+                      <div class="content__award-title">
+                        <p> Stormfront: Siege City</p>
+                      </div>
+                      <div class="content__award-text small">Expect chaotic weather, complex vertical maps, and a blend of fast-paced action and tactical gameplay</div>
+                    </div>
+                    <div class="content__award">
+                      <div class="content__award-img"><img src="img/up-4.png" alt=""></div>
+                      <div class="content__award-title">
+                        <p>Hollow Forest</p>
+                      </div>
+                      <div class="content__award-text small">The focus here is on atmospheric, fantasy-driven worldbuilding</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+
+                                                                                                      <!-- About Me -->
+
+          <div class="scrollable">
+            <section class="testimonials">
+              <div class="sticky-title">
+                <ul>
+                  <li>
+                    <div>About Me</div>
+                    <div>1.4</div>
+                  </li>
+                </ul>
+              </div>
+              <div class="content" style="background-image: url(images/testmonials-bg.png); background-size: auto 100%; background-repeat: no-repeat; background-position: center center;">
+                <div class="content__left">
+                  <div class="content__title">
+                    <div class="h1">17</div>
+                    <div class="h1">Years Old</div>
+                    <div class="h1">Nithish</div>
+                    <div class="small"> a 17-year-old environment artist and game developer. <span>I am also CEO of Nienty's Studio.</span> I embarked on my learning journey in 2020, and since then, I’ve been dedicated to honing my skills in 3D modeling, texturing, and game development. My passion for creating immersive environments fuels my desire to continuously learn and grow in this ever-evolving field.</div>
+                  </div>
+                  <div class="testimonials__clients">
+                    <div class="testimonials__client"><img src="img/client-1.png" alt=""></div>
+                    <div class="testimonials__client"><img src="img/client-2.png" alt=""></div>
+                    <div class="testimonials__client"><img src="img/client-3.png" alt=""></div>
+                    <div class="testimonials__client"><img src="img/client-4.png" alt=""></div>
+                  </div>
+                </div>
+                <div class="content__right">
+                  <div class="content__subtitle"><span>Nienty</span> is a game development and visual production Studio.</div>
+                  <div class="content__slider slides testimonials__slider">
+                    <div class="slides__container">
+                      <div class="slides__inner">
+                        <div class="slide">
+                          <div class="content__slider-text small">“ My passion for creating immersive environments fuels my desire to continuously learn and grow in this ever-evolving field. I’m excited about the future and eager to explore new techniques and technologies as I continue my creative journey.</div>
+                          <div class="content__slider-name">Nithish</div>
+                          <div class="content__slider-staff small"><span>Founder</span> of The Ninety's Club</div>
+                        </div>
+                        <div class="slide">
+                          <div class="content__slider-text small">“ My passion for creating immersive environments fuels my desire to continuously learn and grow in this ever-evolving field. I’m excited about the future and eager to explore new techniques and technologies as I continue my creative journey.</div>
+                          <div class="content__slider-name">Nithish</div>
+                          <div class="content__slider-staff small"><span>Founder</span> of The Ninety's Club</div>
+                        </div>
+                        <div class="slide">
+                          <div class="content__slider-text small">“ My passion for creating immersive environments fuels my desire to continuously learn and grow in this ever-evolving field. I’m excited about the future and eager to explore new techniques and technologies as I continue my creative journey.</div>
+                          <div class="content__slider-name">Nithish</div>
+                          <div class="content__slider-staff small"><span>Founder</span> of The Ninety's Club</div>
+                        </div>
+                        <div class="slide">
+                          <div class="content__slider-text small">“ My passion for creating immersive environments fuels my desire to continuously learn and grow in this ever-evolving field. I’m excited about the future and eager to explore new techniques and technologies as I continue my creative journey.</div>
+                          <div class="content__slider-name">Nithish</div>
+                          <div class="content__slider-staff small"><span>Founder</span> of The Ninety's Club</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="slides__controls">
+                      <button class="slides__btn slides__btn--prev btn btn--invert btn--arrow" id="prevButton">
+                        <svg>
+                          <use xlink:href="./svg/sprite.svg#arrow"></use>
+                        </svg>
+                      </button>
+                      <button class="slides__btn slides__btn--next btn btn--arrow" id="nextButton">
+                        <svg>
+                          <use xlink:href="./svg/sprite.svg#arrow"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+
+                                                                                                      <!-- working experience -->
+
+          <div class="scrollable">
+            <section class="experience">
+              <div class="sticky-title">
+                <ul>
+                  <li>
+                    <div>working experience</div>
+                    <div>1.5</div>
+                  </li>
+                </ul>
+              </div>
+              <div class="content">
+                <div class="content__bg" style="background-image: url(images/exp-bg.jpg);"></div>
+                <div class="content__left">
+                  <div class="content__title">
+                    <div class="h1">experience & Education</div>
+                    <div class="h1"></div>
+                  </div>
+                  <div class="content__description">
+                    <div class="small">I have been developing Games for 5 years and I know for sure the main trends and directions of modern Games, you will get a Gaming result</div>
+                  </div>
+                 
+                </div>
+                <div class="content__right">
+                  <div class="content__awards experience__list">
+                    <div class="content__award">
+                      <div class="content__award-img"><img src="img/soc-fb.svg" alt=""></div>
+                      <div class="content__award-title"><span class="small">2021-2025</span>
+                        <p>Autodesk Maya</p>
+                      </div>
+                      <div class="content__award-text small">Through a combination of self-taught learning and hands-on practice, I've become very good at 3D modeling.</div>
+                    </div>
+                    <div class="content__award">
+                      <div class="content__award-img"><img src="img/soc-be.svg" alt=""></div>
+                      <div class="content__award-title"><span class="small">2021-2025</span>
+                        <p>Adobe Substance Painter</p>
+                      </div>
+                      <div class="content__award-text small">specializing in texturing high-quality 3D models for game development and other digital projects.</div>
+                    </div>
+                    <div class="content__award">
+                      <div class="content__award-img"><img src="img/soc-tw.svg" alt=""></div>
+                      <div class="content__award-title"><span class="small">2020-2025</span>
+                        <p>quixel</p>
+                      </div>
+                      <div class="content__award-text small">using Megascans to create immersive environments that are both visually stunning and optimized for performance.</div>
+                    </div>
+                    <div class="content__award">
+                      <div class="content__award-img"><img src="img/soc-inst.svg" alt=""></div>
+                      <div class="content__award-title"><span class="small">2020-2025</span>
+                        <p>Adobe PhotoShop</p>
+                      </div>
+                      <div class="content__award-text small">"I have a solid background in using Adobe Photoshop, primarily for creating textures, and post-processing in my 3D art projects.</div>
+                    </div>
+                    <div class="content__award">
+                      <div class="content__award-img"><img src="img/soc-in.svg" alt=""></div>
+                      <div class="content__award-title"><span class="small">2020-2025</span>
+                        <p>Unreal engine</p>
+                      </div>
+                      <div class="content__award-text small">Assertively exploit wireless initiatives rather than synergistic core competencies.</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+
+                                                                                                      <!-- blog -->
+
+          <div class="scrollable">
+            <section class="news">
+              <div class="sticky-title">
+                <ul>
+                  <li>
+                    <div>from the blog</div>
+                    <div>1.6</div>
+                  </li>
+                </ul>
+              </div>
+              <div class="content">
+                <div class="content__left">
+                  <div class="content__title">
+                    <div class="h1">latest</div>
+                    <div class="h1">news</div>
+                    <div class="small">I'll Update Monthly</div>
+                  </div>
+                  <ul class="content__menu news__menu">
+                    <li class="active"><a href="javascript:;">High Resolution Screenshot</a></li>
+                    <li><a href="javascript:;">Second Floor Texture</a></li>
+                    <li><a href="javascript:;">First Floor Texture</a></li>
+                    <li><a href="javascript:;">Texture started</a></li>
+                    <li><a href="javascript:;">Modeling</a></li>
+                  </ul>
+                </div>
+                <div class="content__right">
+                  <div class="news__blocks">
+                    <div class="news__block active">
+                      <div class="news__block-info">
+                        <div class="news__block-date small">3th October, 2024</div>
+                        <div class="news__block-text small">House Model From Ref —  A Completed High Res-House Model, this almost took 4 Days to complete. the modeling process take's 3 days, texturing process takes 2 days.</div>
+                        <div class="news__block-number">(01)</div>
+                      </div>
+                      <div class="news__block-image"><a href="" target="_blank"><img src="img/news-1.jpg" alt=""></a></div>
+                    </div>
+                    <div class="news__block active">
+                      <div class="news__block-info">
+                        <div class="news__block-date small">2nd October, 2024</div>
+                        <div class="news__block-text small">House Model From Ref —  Second Floor texturing is completed, its not as good in ref image but completed.</div>
+                        <div class="news__block-number">(02)</div>
+                      </div>
+                      <div class="news__block-image"><a href="" target="_blank"><img src="img/news-2.jpg" alt=""></a></div>
+                    </div>
+                    <div class="news__block active">
+                      <div class="news__block-info">
+                        <div class="news__block-date small">1st October, 2024</div>
+                        <div class="news__block-text small">House Model From Ref —  First Floor Texture is completed, im learned from my mistakes.</div>
+                        <div class="news__block-number">(03)</div>
+                      </div>
+                      <div class="news__block-image"><a href="" target="_blank"><img src="img/news-3.jpg" alt=""></a></div>
+                    </div>
+                    <div class="news__block active">
+                      <div class="news__block-info">
+                        <div class="news__block-date small">1st October, 2020</div>
+                        <div class="news__block-text small">House Model From Ref —  Texture process started, i use Adobe Substance painter for texturing.</div>
+                        <div class="news__block-number">(04)</div>
+                      </div>
+                      <div class="news__block-image"><a href="" target="_blank"><img src="img/news-4.jpg" alt=""></a></div>
+                    </div>
+                    <div class="news__block active">
+                      <div class="news__block-info">
+                        <div class="news__block-date small">28th September, 2020</div>
+                        <div class="news__block-text small">House Model From Ref —  The Modeling, im using vertex color so i can easly paint in substance painter. i use Autodesk Maya for modeling.</div>
+                        <div class="news__block-number">(05)</div>
+                      </div>
+                      <div class="news__block-image"><a href="" target="_blank"><img src="img/news-5.jpg" alt=""></a></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+
+                                                                                                      <!-- contact -->
+
+          <div class="scrollable" id="hireme">
+            <section class="contacts">
+              <div class="sticky-title">
+                <ul>
+                  <li>
+                    <div>contact</div>
+                    <div>1.7</div>
+                  </li>
+                </ul>
+              </div>
+              <div class="content">
+                <div class="content__left">
+                  <div class="content__title">
+                    <div class="h1">Hire me</div>
+                    <div class="small">Enjoy coffe with me</div>
+                  </div>
+                  <ul class="content__menu contacts__menu">
+                    
+                    <li class="active"><a class="noicon" href="javascript:;" onclick="window.open('skype:nithish_xd')">skype</a></li>
+                    <li class="active"><a href="https://www.instagram.com/nithish_xd" target="_blank">instagram</a></li>
+                    <li class="active"><a class="noicon" href="https://discord.gg/zxT8cdTs" target="_blank">Discord</a></li>
+                  </ul>
+                  <div class="contacts__copyright small">© Nithish 2024.  All Rights Resevered</div>
+                </div>
+                <div class="content__right">
+                  <div class="content__subtitle">Let’s connect and explore new <span>opportunities</span> together.</div>      
+
+                                                                                                      <!-- Form -->
+                  
+                  <form class="content__contacts contacts__form js-contact-form" id="myForm" action="https://api.web3forms.com/submit" method="post" >
+                    <div class="content__brief">
+                    </div>
+                    <div class="content__form">
+                      <label class="content__form-input">
+                        <input type="hidden" name="access_key" value="c6bed53f-4eb8-4aed-ab9c-ec60cf9e7832">
+                        <input type="text" name="name" placeholder="Name">
+                      </label>
+                      <label class="content__form-input">
+                        <input type="email" name="emal" required="" placeholder="EMAIL*">
+                      </label>
+                      <label class="content__form-input">
+                        <input type="text" name="msg" required="" minlength="10" placeholder="MESSAGE*">                      </label>
+                      
+                      <div class="content__form-btn">
+                        <button class="btn btn--arrow" type="submit" >Submit
+                          
+                        </button>
+                      </div>
+                    </div>
+                  </form>
+
+
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="js/main.js"></script>
+  </body>
+</html>
